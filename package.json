@@ -6,9 +6,25 @@
   "private": true,
   "main": "start.js",
   "build": {
-    "appId": "01",
+    "appId": "com.storepointofsale.pos",
+    "productName": "POS System",
+    "win": {
+      "target": "msi",
+      "icon": "assets/images/icon.ico",
+      "publish": [
+        {
+          "provider": "generic",
+          "url": "https://www.storepointofsale.com/downloads/"
+        }
+      ]
+    },
     "directories": {
       "buildResources": "assets"
+    },
+    "msi": {
+      "description": "POS System Installer",
+      "arch": "x64",
+      "name": "POS-System"
     }
   },
   "dependencies": {
